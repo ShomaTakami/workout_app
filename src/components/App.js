@@ -1,11 +1,15 @@
 import React from "react";
-import SearchAppBar from "./AppBar";
+import { BrowserRouter } from "react-router-dom";
 
-const App = () => {
+import AppPage from "./AppPage";
+
+import "./App.css";
+
+const App = props => {
   return (
-    <div>
-      <SearchAppBar />
-    </div>
+    <BrowserRouter>
+      <AppPage />
+    </BrowserRouter>
   );
 };
 

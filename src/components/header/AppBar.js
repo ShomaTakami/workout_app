@@ -1,5 +1,4 @@
 import React from "react";
-import CssBaseline from "@material-ui/core/CssBaseline";
 
 import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
@@ -71,7 +70,6 @@ export default function SearchAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position='static'>
-        <CssBaseline />
         <Toolbar>
           <IconButton
             edge='start'
