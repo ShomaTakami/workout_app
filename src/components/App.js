@@ -1,7 +1,12 @@
 import React from "react";
+import SearchAppBar from "./AppBar";
 
 const App = () => {
-  return <div>this is App page</div>;
+  return (
+    <div>
+      <SearchAppBar />
+    </div>
+  );
 };
 
 export default App;
