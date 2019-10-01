@@ -1,7 +1,10 @@
 import React from "react";
 
-const Account = ({ match, history, location }) => {
-  return <div>this is account page here</div>;
-};
-
+function Account() {
+  return (
+    <div style={{ backgroundColor: "white", height: "90vh" }}>
+      this is account page
+    </div>
+  );
+}
 export default Account;

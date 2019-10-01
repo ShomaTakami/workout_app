@@ -3,57 +3,67 @@ import { makeStyles } from "@material-ui/core/styles";
 import Paper from "@material-ui/core/Paper";
 import Table from "@material-ui/core/Table";
 import TableBody from "@material-ui/core/TableBody";
+import EditIcon from "@material-ui/icons/Edit";
+
 import TableCell from "@material-ui/core/TableCell";
 import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-  { id: "menu", label: "Menu", minWidth: 200 },
-  { id: "weight", label: "Weight", minWidth: 50 },
+  { id: "menu", label: "Menu", minWidth: 250 },
+  { id: "bodypart", label: "BodyPart", minWidth: 250 },
+  {
+    id: "weight",
+    label: "Weight",
+    minWidth: 50
+  },
   {
     id: "reps",
     label: "repetitions (reps)",
     minWidth: 50,
-    align: "right",
+    align: "center",
     format: value => value.toLocaleString()
   },
   {
     id: "sets",
     label: "Sets",
     minWidth: 50,
-    align: "right",
-    format: value => value.toLocaleString()
+    align: "center"
   },
   {
     id: "action",
     label: "Action",
     minWidth: 45,
-    align: "right",
+    align: "center",
     format: value => value.toFixed(2)
   }
 ];
 
-function createData(menu, weight, reps, sets, action) {
-  return { menu, weight, reps, sets, action };
+function createData(menu, bodypart, weight, reps, sets, action) {
+  return { menu, bodypart, weight, reps, sets, action };
 }
 
 const rows = [
-  createData("India", "IN", 1324171354, 3287263),
-  createData("China", "CN", 1403500365, 9596961),
-  createData("Italy", "IT", 60483973, 301340),
-  createData("United States", "US", 327167434, 9833520),
-  createData("Canada", "CA", 37602103, 9984670),
-  createData("Australia", "AU", 25475400, 7692024),
-  createData("Germany", "DE", 83019200, 357578),
-  createData("Ireland", "IE", 4857000, 70273),
-  createData("Mexico", "MX", 126577691, 1972550),
-  createData("Japan", "JP", 126317000, 377973),
-  createData("France", "FR", 67022000, 640679),
-  createData("United Kingdom", "GB", 67545757, 242495),
-  createData("Russia", "RU", 146793744, 17098246),
-  createData("Nigeria", "NG", 200962417, 923768),
-  createData("Brazil", "BR", 210147125, 8515767)
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3),
+  createData("Bench Press", "Chest", "55lbs each", 10, 3)
 ];
 
 const useStyles = makeStyles({
@@ -81,7 +91,9 @@ export default function Workout({ match, history, location }) {
   };
 
   return (
-    <Paper className={classes.root}>
+    <Paper
+      className={classes.root}
+      style={{ backgroundColor: "white", height: "90vh" }}>
       <div className={classes.tableWrapper}>
         <Table stickyHeader>
           <TableHead>
@@ -101,11 +113,7 @@ export default function Workout({ match, history, location }) {
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map(row => {
                 return (
-                  <TableRow
-                    hover
-                    role='checkbox'
-                    tabIndex={-1}
-                    key={row.weight}>
+                  <TableRow hover role='checkbox' tabIndex={-1} key={row.id}>
                     {columns.map(column => {
                       const value = row[column.id];
                       return (
@@ -116,7 +124,9 @@ export default function Workout({ match, history, location }) {
                         </TableCell>
                       );
                     })}
+                    <EditIcon />
                   </TableRow>
+                  //TODO icon add (edit, delete)
                 );
               })}
           </TableBody>

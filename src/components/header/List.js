@@ -40,8 +40,8 @@ function VirtualizedList({ match }) {
         <ListItemIcon>
           <TrendingUpIcon />
         </ListItemIcon>
-        <Link to='/today'>
-          <ListItemText inset primary='Today' />
+        <Link to='/record'>
+          <ListItemText inset primary='Record' />
         </Link>
       </ListItem>
 
@@ -58,8 +58,8 @@ function VirtualizedList({ match }) {
         <ListItemIcon>
           <EventAvailableIcon />
         </ListItemIcon>{" "}
-        <Link to='/calender'>
-          <ListItemText inset primary='Calender' />
+        <Link to='/calendar'>
+          <ListItemText inset primary='Calendar' />
         </Link>
       </ListItem>
 

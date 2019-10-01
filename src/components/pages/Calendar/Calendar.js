@@ -1,10 +1,10 @@
 import React from "react";
 
-function Timer() {
+function Calendar() {
   return (
     <div style={{ backgroundColor: "white", height: "90vh" }}>
       this is timer page
     </div>
   );
 }
-export default Timer;
+export default Calendar;

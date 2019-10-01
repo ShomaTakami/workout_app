@@ -64,7 +64,7 @@ const useStyles = makeStyles(theme => ({
   }
 }));
 
-export default function SearchAppBar() {
+export default function SearchAppBar(props) {
   const classes = useStyles();
 
   return (
@@ -79,7 +79,8 @@ export default function SearchAppBar() {
             <TemporaryDrawer />
           </IconButton>
           <Typography className={classes.title} variant='h6' noWrap>
-            this is header
+            {/* TODO menuごとにタイトル変更 */}
+            header
           </Typography>
           <div className={classes.search}>
             <div className={classes.searchIcon}>
