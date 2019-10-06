@@ -2,7 +2,7 @@ import React from "react";
 import { Switch, Route } from "react-router-dom";
 import SearchAppBar from "./header/AppBar";
 
-import Workout from "./pages/Workout/WorkoutTable";
+import Workout from "./pages/Workout/Workout";
 import Record from "./pages/Record/Record";
 import Timer from "./pages/Timer/Timer";
 import Calendar from "./pages/Calendar/Calendar";

@@ -1,9 +1,14 @@
 import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Drawer from "@material-ui/core/Drawer";
-import MenuIcon from "@material-ui/icons/Menu";
-
 import Button from "@material-ui/core/Button";
+import List from "@material-ui/core/List";
+// import Divider from "@material-ui/core/Divider";
+// import ListItem from "@material-ui/core/ListItem";
+// import ListItemIcon from "@material-ui/core/ListItemIcon";
+// import ListItemText from "@material-ui/core/ListItemText";
+// import InboxIcon from "@material-ui/icons/MoveToInbox";
+// import MailIcon from "@material-ui/icons/Mail";
 
 import VirtualizedList from "./List";
 
@@ -36,14 +41,16 @@ export default function TemporaryDrawer() {
       role='presentation'
       onClick={toggleDrawer(side, false)}
       onKeyDown={toggleDrawer(side, false)}>
-      <VirtualizedList />
+      <List>
+        <VirtualizedList />
+      </List>
     </div>
   );
 
   return (
     <div>
-      <Button onClick={toggleDrawer("left", true)}>
-        <MenuIcon />
+      <Button onClick={toggleDrawer("left", true)} style={{ color: "white" }}>
+        Menu
       </Button>
       <Drawer open={state.left} onClose={toggleDrawer("left", false)}>
         {sideList("left")}

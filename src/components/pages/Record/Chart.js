@@ -12,7 +12,7 @@ import {
 
 const data = [
   {
-    name: "Page A",
+    name: "Bench Press",
     Goal: 6000,
     Before: 2400,
     Current: 100
@@ -52,6 +52,24 @@ const data = [
     Goal: 6000,
     Before: 4300,
     Current: 100
+  },
+  {
+    name: "Page G",
+    Goal: 6000,
+    Before: 4300,
+    Current: 100
+  },
+  {
+    name: "Page G",
+    Goal: 6000,
+    Before: 4300,
+    Current: 100
+  },
+  {
+    name: "Page G",
+    Goal: 6000,
+    Before: 4300,
+    Current: 100
   }
 ];
 
@@ -61,13 +79,13 @@ export default class Example extends PureComponent {
   render() {
     return (
       <BarChart
-        width={900}
+        width={1600}
         height={750}
         data={data}
         margin={{
-          top: 100,
+          top: 150,
           right: 30,
-          left: 20,
+          left: 190,
           bottom: 10
         }}>
         <CartesianGrid strokeDasharray='3 3' />
