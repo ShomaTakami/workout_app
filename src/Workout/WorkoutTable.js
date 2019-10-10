@@ -39,11 +39,18 @@ const columns = [
 
 const useStyles = makeStyles({
   root: {
-    width: "100%"
+    width: "90%",
+    margin: "65px auto"
   },
   tableWrapper: {
-    maxHeight: 440,
-    overflow: "auto"
+    maxHeight: 500
+    // overflow: "auto"
+  },
+  text: {
+    fontSize: "20px"
+  },
+  list: {
+    fontSize: "15px"
   }
 });
 
@@ -77,7 +84,8 @@ function WorkoutTable({
                 <TableCell
                   key={column.id}
                   align={column.align}
-                  style={{ minWidth: column.minWidth }}>
+                  style={{ minWidth: column.minWidth }}
+                  className={classes.text}>
                   {column.label}
                 </TableCell>
               ))}
@@ -101,7 +109,10 @@ function WorkoutTable({
                     {columns.map(column => {
                       const value = row[column.id];
                       return (
-                        <TableCell key={column.id} align={column.align}>
+                        <TableCell
+                          key={column.id}
+                          align={column.align}
+                          className={classes.list}>
                           {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}
