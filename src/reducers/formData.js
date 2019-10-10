@@ -1,10 +1,10 @@
-import { addFormData } from "../actions/formData";
+// import { addFormData } from "../actions/formData";
 
 // constant file
 
-function createData(id, menu, part, weight, reps, sets) {
-  return { id, menu, part, weight, reps, sets };
-}
+// function createData(id, menu, part, weight, reps, sets, goal) {
+//   return { id, menu, part, weight, reps, sets, goal };
+// }
 // function createData(name, bodypart, weight, reps, sets, updated, goal) {
 //   return { name, bodypart, weight, reps, sets, updated, goal };
 // }

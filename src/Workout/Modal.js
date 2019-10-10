@@ -4,12 +4,34 @@ import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-import DialogContentText from "@material-ui/core/DialogContentText";
+// import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import uuid from "uuid/v1";
+import { makeStyles } from "@material-ui/core/styles";
+
+const useStyles = makeStyles(theme => ({
+  module: {
+    width: "40%",
+    margin: theme.spacing(9),
+    overflowX: "auto",
+    backgroundColor: "white"
+  },
+  title: {
+    textAlign: "center",
+    color: "#3F52B5"
+  }
+  // table: {
+  //   minWidth: 650
+  // },
+  // listText: {
+  //   fontSize: "23px"
+  // }
+}));
 
 export default function FormDialog(props) {
-  const { id, menu, part, weight, reps, sets } = props.formData;
+  const style = useStyles();
+
+  const { id, menu, part, weight, reps, sets, goal } = props.formData;
 
   //*useState only sets default once
   const [menuValue, setMenuValue] = React.useState(menu);
@@ -17,14 +39,7 @@ export default function FormDialog(props) {
   const [weightValue, setWeightValue] = React.useState(weight);
   const [repsValue, setRepsValue] = React.useState(reps);
   const [setsValue, setSetsValue] = React.useState(sets);
-
-  // const uniqueKey = () => {
-  //   if(id === null) {
-  //     return uuid();
-  //   } else {
-  //     return id;
-  //   }
-  // }
+  const [goalValue, setGoalValue] = React.useState(goal);
 
   const save = () => {
     // 1. validation
@@ -34,7 +49,8 @@ export default function FormDialog(props) {
       part: partValue,
       weight: weightValue,
       reps: repsValue,
-      sets: setsValue
+      sets: setsValue,
+      goal: goalValue
     });
     // 2. save data to redux
     if (props.isAddButton) {
@@ -44,7 +60,8 @@ export default function FormDialog(props) {
         part: partValue,
         weight: weightValue,
         reps: repsValue,
-        sets: setsValue
+        sets: setsValue,
+        goal: goalValue
       });
     } else {
       //edit
@@ -54,7 +71,8 @@ export default function FormDialog(props) {
         part: partValue,
         weight: weightValue,
         reps: repsValue,
-        sets: setsValue
+        sets: setsValue,
+        goal: goalValue
       });
     }
 
@@ -67,7 +85,9 @@ export default function FormDialog(props) {
         open={true}
         onClose={props.handleClose}
         aria-labelledby='form-dialog-title'>
-        <DialogTitle id='form-dialog-title'>Add new menu</DialogTitle>
+        <DialogTitle id='form-dialog-title' className={style.title}>
+          ADD NEW MENU
+        </DialogTitle>
         <DialogContent>
           <form>
             <TextField
@@ -77,10 +97,9 @@ export default function FormDialog(props) {
               label='Menu'
               className=''
               margin='normal'
-              // fullWidth={true}
               value={menuValue}
               onChange={e => setMenuValue(e.target.value)}
-              fullWidth
+              fullWidth={true}
             />
             <TextField
               required={true}
@@ -88,22 +107,23 @@ export default function FormDialog(props) {
               label='Part'
               className=''
               margin='normal'
-              // fullWidth={true}
               value={partValue}
               onChange={e => setPartValue(e.target.value)}
-              fullWidth
+              fullWidth={true}
             />
             <TextField
+              type='number'
               required={true}
               id='standard-name'
-              label='Weight'
+              label='Weight (lbs)'
               className=''
               value={weightValue}
               onChange={e => setWeightValue(e.target.value)}
               margin='normal'
-              fullWidth
+              fullWidth={true}
             />
             <TextField
+              type='number'
               required={true}
               id='standard-name'
               label='Reps'
@@ -111,9 +131,10 @@ export default function FormDialog(props) {
               value={repsValue}
               onChange={e => setRepsValue(e.target.value)}
               margin='normal'
-              fullWidth
+              fullWidth={true}
             />
             <TextField
+              type='number'
               required={true}
               id='standard-name'
               label='Sets'
@@ -121,7 +142,18 @@ export default function FormDialog(props) {
               value={setsValue}
               onChange={e => setSetsValue(e.target.value)}
               margin='normal'
-              fullWidth
+              fullWidth={true}
+            />
+            <TextField
+              type='number'
+              required={true}
+              id='standard-name'
+              label='Goal (lbs)'
+              className=''
+              value={goalValue}
+              onChange={e => setGoalValue(e.target.value)}
+              margin='normal'
+              fullWidth={true}
             />
           </form>
         </DialogContent>
@@ -137,156 +169,3 @@ export default function FormDialog(props) {
     </div>
   );
 }
-
-// import React from "react";
-// import Button from "@material-ui/core/Button";
-// import TextField from "@material-ui/core/TextField";
-// import Dialog from "@material-ui/core/Dialog";
-// import DialogActions from "@material-ui/core/DialogActions";
-// import DialogContent from "@material-ui/core/DialogContent";
-// // import DialogContentText from "@material-ui/core/DialogContentText";
-// import DialogTitle from "@material-ui/core/DialogTitle";
-// // import uuid from "uuid/v1";
-
-// export default function FormDialog(props) {
-//   const { name, bodypart, weight, reps, sets, updated, goal } = props.formData;
-
-//   //*useState only sets default once
-//   const [nameValue, setNameValue] = React.useState(name);
-//   const [partValue, setPartValue] = React.useState(bodypart);
-//   const [weightValue, setWeightValue] = React.useState(weight);
-//   const [repValue, setRepValue] = React.useState(reps);
-//   const [timeValue, setTimeValue] = React.useState(sets);
-//   const [updatedValue, setUpdatedValue] = React.useState(updated);
-//   const [goalValue, setGoalValue] = React.useState(goal);
-
-//   const save = () => {
-//     // 1. validation
-
-//     console.log({
-//       name: nameValue,
-//       bodypart: partValue,
-//       weight: weightValue,
-//       reps: repValue,
-//       sets: timeValue,
-//       updated: updatedValue,
-//       goal: goalValue
-//     });
-//     // 2. save data to redux
-//     if (props.isAddButton) {
-//       props.addFormData({
-//         name: nameValue,
-//         bodypart: partValue,
-//         weight: weightValue,
-//         reps: repValue,
-//         sets: timeValue,
-//         updated: updatedValue,
-//         goal: goalValue
-//       });
-//     } else {
-//       //edit
-//       props.editFormData({
-//         name: nameValue,
-//         bodypart: partValue,
-//         weight: weightValue,
-//         reps: repValue,
-//         sets: timeValue,
-//         updated: updatedValue,
-//         goal: goalValue
-//       });
-//     }
-
-//     props.handleClose();
-//   };
-
-//   return (
-//     <div>
-//       <Dialog
-//         open={true}
-//         onClose={props.handleClose}
-//         aria-labelledby='form-dialog-title'>
-//         <DialogTitle id='form-dialog-title'>Add new issue</DialogTitle>
-//         <DialogContent>
-//           <form>
-//             <TextField
-//               autoFocus
-//               required={true}
-//               id='standard-required'
-//               label='Name'
-//               className=''
-//               margin='normal'
-//               fullWidth={true}
-//               value={nameValue}
-//               onChange={e => setNameValue(e.target.value)}
-//             />
-//             <TextField
-//               required={true}
-//               id='standard-required'
-//               label='BodyPart'
-//               className=''
-//               margin='normal'
-//               fullWidth={true}
-//               value={partValue}
-//               onChange={e => setPartValue(e.target.value)}
-//             />
-//             <TextField
-//               required={true}
-//               id='standard-name'
-//               label='Weight'
-//               className=''
-//               value={weightValue}
-//               onChange={e => setWeightValue(e.target.value)}
-//               margin='normal'
-//               fullWidth
-//             />
-//             <TextField
-//               id='standard-name'
-//               label='Reps'
-//               className=''
-//               value={repValue}
-//               onChange={e => setRepValue(e.target.value)}
-//               margin='normal'
-//               fullWidth
-//             />
-//             <TextField
-//               id='standard-name'
-//               label='Sets'
-//               className=''
-//               value={timeValue}
-//               onChange={e => setTimeValue(e.target.value)}
-//               margin='normal'
-//               fullWidth
-//             />
-//             <TextField
-//               id='standard-name'
-//               label='Updated At'
-//               className=''
-//               value={updatedValue}
-//               onChange={e => setUpdatedValue(e.target.value)}
-//               margin='normal'
-//               fullWidth
-//             />
-//             <TextField
-//               required={true}
-//               id='standard-name'
-//               label='Goal'
-//               className=''
-//               value={goalValue}
-//               onChange={e => setGoalValue(e.target.value)}
-//               margin='normal'
-//               fullWidth
-//             />
-//           </form>
-//         </DialogContent>
-//         <DialogActions className='Modal-DialogActions'>
-//           <Button color='primary' onClick={save}>
-//             Save
-//           </Button>
-//           <Button onClick={props.handleClose} color='primary'>
-//             Cancel
-//           </Button>
-//         </DialogActions>
-//       </Dialog>
-//     </div>
-//   );
-// }

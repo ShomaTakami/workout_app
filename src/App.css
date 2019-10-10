@@ -1,12 +1,12 @@
 body {
   background-color: black;
   color: white;
-  margin: 0;
+  margin: 25px;
 }
 
 .btn-square {
   display: inline-block;
-  padding: 0.5em 1em;
+  padding: 1em 1.5em;
   text-decoration: none;
   background: #668ad8; /*ボタン色*/
   color: #fff;

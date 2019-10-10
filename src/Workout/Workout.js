@@ -61,11 +61,11 @@ function Workout(props) {
     <div className='work_page'>
       <div className='header'>
         <Link to='/record' className='li left'>
-          <button className='btn-square'>go to Chart</button>
+          <button className='btn-square'>Chart</button>
         </Link>
         <h1 className='work_h1 li'>Menu</h1>
         <Link to='/calendar' className='li right'>
-          <button className='btn-square'>go to calendar</button>
+          <button className='btn-square'>Calendar</button>
         </Link>
       </div>
       <WorkoutTable

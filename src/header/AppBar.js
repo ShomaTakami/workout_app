@@ -70,7 +70,7 @@ export default function SearchAppBar() {
                 </div>
 
                 <div className='container'>
-                  <label for='uname'>
+                  <label htmlFor='uname'>
                     <b>Username</b>
                   </label>
                   <input
@@ -80,7 +80,7 @@ export default function SearchAppBar() {
                     required
                   />
 
-                  <label for='psw'>
+                  <label htmlFor='psw'>
                     <b>Password</b>
                   </label>
                   <input
@@ -102,7 +102,7 @@ export default function SearchAppBar() {
                   style={{ backgroundColor: "#f1f1f1" }}>
                   <button
                     type='button'
-                    onclick="document.getElementById('id01').style.display='none'"
+                    onClick="document.getElementById('id01').style.display='none'"
                     className='cancelbtn'>
                     Cancel
                   </button>

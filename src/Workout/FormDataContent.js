@@ -1,24 +1,5 @@
-// constant file
-// function createData(name, bodypart, weight, reps, sets, updated, goal) {
-//   return { name, bodypart, weight, reps, sets, updated, goal };
-// }
-
-// // NOT a default export
-// export const rows = [
-//   createData("bench press", "chest", "160lbs", "10", "3", "9/28/2019", "4000"),
-//   createData("bench press", "chest", "160lbs", "10", "3", "9/28/2019", "4000"),
-//   createData("bench press", "chest", "160lbs", "10", "3", "9/28/2019", "4000"),
-//   createData("bench press", "chest", "160lbs", "10", "3", "9/28/2019", "4000"),
-//   createData("bench press", "chest", "160lbs", "10", "3", "9/28/2019", "4000"),
-//   createData("bench press", "chest", "160lbs", "10", "3", "9/28/2019", "4000")
-// ];
-
-// A default export
-// export default rows
-
-// constant file
-function createData(id, menu, part, weight, reps, sets) {
-  return { id, menu, part, weight, reps, sets };
+function createData(id, menu, part, weight, reps, sets, goal) {
+  return { id, menu, part, weight, reps, sets, goal };
 }
 
 // NOT a default export
