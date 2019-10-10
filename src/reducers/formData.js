@@ -5,21 +5,10 @@
 // function createData(id, menu, part, weight, reps, sets, goal) {
 //   return { id, menu, part, weight, reps, sets, goal };
 // }
-// function createData(name, bodypart, weight, reps, sets, updated, goal) {
-//   return { name, bodypart, weight, reps, sets, updated, goal };
-// }
 
 const initialState = {
-  rows: [
-    // createData('123456789', "Random title1", "open", "https://api.github.com/repos/angular/angular/", "2019-09-24T10:01:21Z", "2019-09-24T10:01:21Z"),
-    // createData('123456712', "Random title2", "open", "https://api.github.com/repos/angular/angular/", "2019-09-24T10:01:21Z", "2019-09-24T10:01:21Z"),
-    // createData('223456789', "Random title3", "open", "https://api.github.com/repos/angular/angular/", "2019-09-24T10:01:21Z", "2019-09-24T10:01:21Z"),
-    // createData('323456789', "Random title4", "open", "https://api.github.com/repos/angular/angular/", "2019-09-24T10:01:21Z", "2019-09-24T10:01:21Z"),
-    // createData('423456789', "Random title5", "open", "https://api.github.com/repos/angular/angular/", "2019-09-24T10:01:21Z", "2019-09-24T10:01:21Z"),
-  ]
+  rows: []
 };
-
-// state => most updated data
 
 // if threre is nothing in the state, use intialState
 export default function formData(state = initialState, action) {
@@ -51,7 +40,6 @@ export default function formData(state = initialState, action) {
       let editedRows = state.rows;
       console.log("edited object", action.payload);
 
-      // Answer1: using map
       const newRows = editedRows.map(row => {
         if (row.id === action.payload.id) {
           return action.payload;
@@ -59,14 +47,9 @@ export default function formData(state = initialState, action) {
         return row;
       });
 
-      //Answer2: using index and replacing it
-      // const index = editedRows.findIndex((row) => row.id === action.payload.name)
-
-      // editedRows[index] = action.payload;
-
       return {
         ...state,
-        rows: newRows //or editedRows
+        rows: newRows
       };
     default:
       return state;

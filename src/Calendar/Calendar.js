@@ -9,12 +9,12 @@ function Calendar({ match, history, location }) {
   return (
     <div className='cal_page'>
       <div className='header'>
-        <Link to='/' className='li left'>
-          <button className='btn-square'>Menu</button>
+        <Link to='/' className='li left btn-square'>
+          Menu
         </Link>
         <h1 className='cal_h1 li'>Calendar</h1>
-        <Link to='/record' className='li right'>
-          <button className='btn-square'>Chart</button>
+        <Link to='/record' className='li right btn-square'>
+          Chart
         </Link>
       </div>
       <br />

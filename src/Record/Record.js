@@ -8,12 +8,12 @@ const Record = ({ match, history, location }) => {
   return (
     <div className='rec_page'>
       <div className='header'>
-        <Link to='/calendar' className='li left'>
-          <button className='btn-square'>Calendar</button>
+        <Link to='/calendar' className='li left btn-square'>
+          Calendar
         </Link>
         <h1 className='char_h1 li'>Chart</h1>
-        <Link to='/' className='li right'>
-          <button className='btn-square'>Menu</button>
+        <Link to='/' className='li right btn-square'>
+          Menu
         </Link>
       </div>
       <div id='chart'>

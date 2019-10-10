@@ -2,13 +2,13 @@ import React from "react";
 import WorkoutTable from "./WorkoutTable";
 import Modal from "./Modal";
 import { rows } from "./FormDataContent";
-import "./workout.css";
 import { Link } from "react-router-dom";
 
 // Redux Step 1 > import 2 things
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
+import "./workout.css";
 //Redux Step: import actions
 import {
   getFormData,
@@ -60,12 +60,12 @@ function Workout(props) {
   return (
     <div className='work_page'>
       <div className='header'>
-        <Link to='/record' className='li left'>
-          <button className='btn-square'>Chart</button>
+        <Link to='/record' className='li left btn-square'>
+          Chart
         </Link>
         <h1 className='work_h1 li'>Menu</h1>
-        <Link to='/calendar' className='li right'>
-          <button className='btn-square'>Calendar</button>
+        <Link to='/calendar' className='li right btn-square'>
+          Calendar
         </Link>
       </div>
       <WorkoutTable
