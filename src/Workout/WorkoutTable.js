@@ -131,12 +131,12 @@ function WorkoutTable({
 }) {
   const classes1 = useStyles();
 
-  const classes = useStyles2();
+  // const classes = useStyles2();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
-  const emptyRows =
-    rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
+  // const emptyRows =
+  //   rowsPerPage - Math.min(rowsPerPage, rows.length - page * rowsPerPage);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -220,7 +220,7 @@ function WorkoutTable({
         <TableFooter>
           <TableRow>
             <TablePagination
-              rowsPerPageOptions={5}
+              rowsPerPageOptions={[5, 10, 15]}
               colSpan={3}
               count={rows.length}
               rowsPerPage={rowsPerPage}
@@ -241,67 +241,3 @@ function WorkoutTable({
 }
 
 export default WorkoutTable;
-
-// function WorkoutTable({
-//   openModal,
-//   setIsAddButton,
-//   setFormDataId,
-//   rows,
-//   deleteFormData
-// }) {
-//   const classes = useStyles();
-//   return (
-//     <Paper className={classes.root}>
-//       <Table className={classes.table}>
-//         <TableHead>
-//           <TableRow>
-//             <TableCell>Name</TableCell>
-//             <TableCell align='right'>BodyPart</TableCell>
-//             <TableCell align='right'>Weight</TableCell>
-//             <TableCell align='right'>Reps</TableCell>
-//             <TableCell align='right'>Sets</TableCell>
-//             <TableCell align='right'>Updated at</TableCell>
-//             <TableCell align='right'>
-//               <AddIcon
-//                 color='primary'
-//                 onClick={() => {
-//                   openModal();
-//                   setIsAddButton(true);
-//                 }}
-//               />
-//             </TableCell>
-//           </TableRow>
-//         </TableHead>
-//         <TableBody>
-//           {rows.map(row => (
-//             <TableRow key={row.name}>
-//               <TableCell component='th' scope='row'>
-//                 {row.name}
-//               </TableCell>
-//               <TableCell align='right'>{row.bodypart}</TableCell>
-//               <TableCell align='right'>{row.weight}</TableCell>
-//               <TableCell align='right'>{row.reps}</TableCell>
-//               <TableCell align='right'>{row.sets}</TableCell>
-//               <TableCell align='right'>{row.updated}</TableCell>
-//               <TableCell align='right'>
-//                 {/* This is edit button */}
-//                 <CreateIcon
-//                   color='secondary'
-//                   onClick={() => {
-//                     setIsAddButton(false);
-//                     openModal();
-//                     setFormDataId(row.name);
-//                   }}
-//                 />
-//                 <DeleteIcon
-//                   color='secondary'
-//                   onClick={() => deleteFormData(row.name)}
-//                 />
-//               </TableCell>
-//             </TableRow>
-//           ))}
-//         </TableBody>
-//       </Table>
-//     </Paper>
-//   );
-// }
