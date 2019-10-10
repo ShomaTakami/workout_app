@@ -34,12 +34,12 @@ function WorkoutTable({
       <Table className={classes.table}>
         <TableHead>
           <TableRow>
-            <TableCell>Name</TableCell>
-            <TableCell align='right'>BodyPart</TableCell>
+            {/* <TableCell>Id</TableCell> */}
+            <TableCell align='right'>Menu</TableCell>
+            <TableCell align='right'>Part</TableCell>
             <TableCell align='right'>Weight</TableCell>
             <TableCell align='right'>Reps</TableCell>
             <TableCell align='right'>Sets</TableCell>
-            <TableCell align='right'>Updated at</TableCell>
             <TableCell align='right'>
               <AddIcon
                 color='primary'
@@ -53,15 +53,15 @@ function WorkoutTable({
         </TableHead>
         <TableBody>
           {rows.map(row => (
-            <TableRow key={row.name}>
-              <TableCell component='th' scope='row'>
-                {row.name}
-              </TableCell>
-              <TableCell align='right'>{row.bodypart}</TableCell>
+            <TableRow key={row.id}>
+              {/* <TableCell component='th' scope='row'>
+                {row.id}
+              </TableCell> */}
+              <TableCell align='right'>{row.menu}</TableCell>
+              <TableCell align='right'>{row.part}</TableCell>
               <TableCell align='right'>{row.weight}</TableCell>
               <TableCell align='right'>{row.reps}</TableCell>
               <TableCell align='right'>{row.sets}</TableCell>
-              <TableCell align='right'>{row.updated}</TableCell>
               <TableCell align='right'>
                 {/* This is edit button */}
                 <CreateIcon
@@ -69,12 +69,12 @@ function WorkoutTable({
                   onClick={() => {
                     setIsAddButton(false);
                     openModal();
-                    setFormDataId(row.name);
+                    setFormDataId(row.id);
                   }}
                 />
                 <DeleteIcon
                   color='secondary'
-                  onClick={() => deleteFormData(row.name)}
+                  onClick={() => deleteFormData(row.id)}
                 />
               </TableCell>
             </TableRow>
@@ -86,3 +86,67 @@ function WorkoutTable({
 }
 
 export default WorkoutTable;
+
+// function WorkoutTable({
+//   openModal,
+//   setIsAddButton,
+//   setFormDataId,
+//   rows,
+//   deleteFormData
+// }) {
+//   const classes = useStyles();
+//   return (
+//     <Paper className={classes.root}>
+//       <Table className={classes.table}>
+//         <TableHead>
+//           <TableRow>
+//             <TableCell>Name</TableCell>
+//             <TableCell align='right'>BodyPart</TableCell>
+//             <TableCell align='right'>Weight</TableCell>
+//             <TableCell align='right'>Reps</TableCell>
+//             <TableCell align='right'>Sets</TableCell>
+//             <TableCell align='right'>Updated at</TableCell>
+//             <TableCell align='right'>
+//               <AddIcon
+//                 color='primary'
+//                 onClick={() => {
+//                   openModal();
+//                   setIsAddButton(true);
+//                 }}
+//               />
+//             </TableCell>
+//           </TableRow>
+//         </TableHead>
+//         <TableBody>
+//           {rows.map(row => (
+//             <TableRow key={row.name}>
+//               <TableCell component='th' scope='row'>
+//                 {row.name}
+//               </TableCell>
+//               <TableCell align='right'>{row.bodypart}</TableCell>
+//               <TableCell align='right'>{row.weight}</TableCell>
+//               <TableCell align='right'>{row.reps}</TableCell>
+//               <TableCell align='right'>{row.sets}</TableCell>
+//               <TableCell align='right'>{row.updated}</TableCell>
+//               <TableCell align='right'>
+//                 {/* This is edit button */}
+//                 <CreateIcon
+//                   color='secondary'
+//                   onClick={() => {
+//                     setIsAddButton(false);
+//                     openModal();
+//                     setFormDataId(row.name);
+//                   }}
+//                 />
+//                 <DeleteIcon
+//                   color='secondary'
+//                   onClick={() => deleteFormData(row.name)}
+//                 />
+//               </TableCell>
+//             </TableRow>
+//           ))}
+//         </TableBody>
+//       </Table>
+//     </Paper>
+//   );
+// }

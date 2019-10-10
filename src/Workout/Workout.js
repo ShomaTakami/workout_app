@@ -3,6 +3,7 @@ import WorkoutTable from "./WorkoutTable";
 import Modal from "./Modal";
 import { rows } from "./FormDataContent";
 import "./workout.css";
+import { Link } from "react-router-dom";
 
 // Redux Step 1 > import 2 things
 import { bindActionCreators } from "redux";
@@ -39,18 +40,17 @@ function Workout(props) {
 
   //object
   const emptyDefault = {
-    name: "", //means null
-    bodypart: "",
+    menu: "", //means null
+    part: "",
     weight: "",
     reps: "",
-    sets: "",
-    updated: ""
+    sets: ""
   };
 
   //function
   const getDataFromId = () => {
     // find the index of the object containing the right id
-    const index = rows.findIndex(row => formDataId === row.name);
+    const index = rows.findIndex(row => formDataId === row.id);
 
     console.log("index", index);
     return rows[index];
@@ -58,13 +58,16 @@ function Workout(props) {
 
   console.log("formDataRows", props.formDataRows);
   return (
-    <div
-      className='work_page'
-      style={{
-        backgroundColor: "black",
-        height: "90vh"
-      }}>
-      <h1 className='work_h1'>Table</h1>
+    <div className='work_page'>
+      <div className='header'>
+        <Link to='/record' className='li left'>
+          <button className='btn-square'>go to Chart</button>
+        </Link>
+        <h1 className='work_h1 li'>Menu</h1>
+        <Link to='/calendar' className='li right'>
+          <button className='btn-square'>go to calendar</button>
+        </Link>
+      </div>
       <WorkoutTable
         openModal={() => setOpen(true)}
         setIsAddButton={setIsAddButton}
@@ -84,8 +87,6 @@ function Workout(props) {
         />
       )}
       {/* ------------------------------------------------------ */}
-      <h1 className='work_h1'>Youtube</h1>
-      {/* // TODO 下にyoutube API 動画検索　筋トレ方法探せる */}
     </div>
   );
 }

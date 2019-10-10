@@ -6,8 +6,19 @@
 
 .cal_h1 {
   color: #3f52b5;
-  display: inline-block;
-  padding: 40px;
-  margin: 0;
-  border-bottom: 1px solid black;
+}
+.header {
+  text-align: center;
+}
+
+.li {
+  display: inline;
+  margin: auto;
+  padding: 20px;
+}
+.left {
+  float: left;
+}
+.right {
+  float: right;
 }

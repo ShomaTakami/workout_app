@@ -1,0 +1,39 @@
+.char_h1 {
+  color: #3f52b5;
+}
+
+.header {
+  text-align: center;
+}
+
+/* .li {
+  display: inline;
+  margin: auto;
+  padding: 20px;
+} */
+.left {
+  float: left;
+}
+.right {
+  float: right;
+}
+.recharts-wrapper {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+}
+.recharts-legend-item {
+  margin: 25px;
+  padding-top: 45px;
+  color: black;
+}
+
+#chart {
+  margin: 55px auto;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  width: 85vw;
+  height: 900;
+  background-color: #fff;
+}

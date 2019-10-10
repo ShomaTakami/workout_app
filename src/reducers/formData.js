@@ -2,9 +2,12 @@ import { addFormData } from "../actions/formData";
 
 // constant file
 
-function createData(name, bodypart, weight, reps, sets, updated) {
-  return { name, bodypart, weight, reps, sets, updated };
+function createData(id, menu, part, weight, reps, sets) {
+  return { id, menu, part, weight, reps, sets };
 }
+// function createData(name, bodypart, weight, reps, sets, updated, goal) {
+//   return { name, bodypart, weight, reps, sets, updated, goal };
+// }
 
 const initialState = {
   rows: [
@@ -42,7 +45,7 @@ export default function formData(state = initialState, action) {
       let reducedRows = state.rows;
       return {
         ...state,
-        rows: reducedRows.filter(row => row.name !== action.payload)
+        rows: reducedRows.filter(row => row.id !== action.payload)
       };
     case "EDIT_FORM_DATA":
       let editedRows = state.rows;
@@ -50,14 +53,14 @@ export default function formData(state = initialState, action) {
 
       // Answer1: using map
       const newRows = editedRows.map(row => {
-        if (row.name === action.payload.name) {
+        if (row.id === action.payload.id) {
           return action.payload;
         }
         return row;
       });
 
       //Answer2: using index and replacing it
-      // const index = editedRows.findIndex((row) => row.name === action.payload.name)
+      // const index = editedRows.findIndex((row) => row.id === action.payload.name)
 
       // editedRows[index] = action.payload;
 
