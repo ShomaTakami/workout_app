@@ -1,7 +1,7 @@
 import React from "react";
 import WorkoutTable from "./WorkoutTable";
 import Modal from "./Modal";
-import { rows } from "./FormDataContent";
+// import { rows } from "./FormDataContent";
 import { Link } from "react-router-dom";
 
 // Redux Step 1 > import 2 things
@@ -50,13 +50,10 @@ function Workout(props) {
   //function
   const getDataFromId = () => {
     // find the index of the object containing the right id
-    const index = rows.findIndex(row => formDataId === row.id);
-
-    console.log("index", index);
-    return rows[index];
+    const index = props.formDataRows.findIndex(row => formDataId === row.id);
+    return props.formDataRows[index];
   };
 
-  console.log("formDataRows", props.formDataRows);
   return (
     <div className='work_page'>
       <div className='header'>
