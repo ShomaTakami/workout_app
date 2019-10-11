@@ -1,7 +1,7 @@
 import React from "react";
 import WorkoutTable from "./WorkoutTable";
 import Modal from "./Modal";
-import { rows } from "./FormDataContent";
+// import { rows } from "./FormDataContent";
 import { Link } from "react-router-dom";
 
 // Redux Step 1 > import 2 things
@@ -18,14 +18,8 @@ import {
 } from "../actions/formData";
 
 function Workout(props) {
-  // [1,2] 1 = statename, 2 = setState
-  // userState(3) 3 means default value
-
-  // data type: boolean
   const [open, setOpen] = React.useState(false);
   const [isAddButton, setIsAddButton] = React.useState(true);
-
-  // data type: number
   const [formDataId, setFormDataId] = React.useState(null);
 
   //fires function right away when component loads
@@ -50,10 +44,9 @@ function Workout(props) {
   //function
   const getDataFromId = () => {
     // find the index of the object containing the right id
-    const index = rows.findIndex(row => formDataId === row.id);
+    const index = props.formDataRows.findIndex(row => formDataId === row.id);
 
-    console.log("index", index);
-    return rows[index];
+    return props.formDataRows[index];
   };
 
   console.log("formDataRows", props.formDataRows);
@@ -75,27 +68,25 @@ function Workout(props) {
         rows={props.formDataRows}
         deleteFormData={props.deleteFormData}
       />
-      {/* when we click edit or plus button, Modal component renders */}
       {open && (
         <Modal
           handleClose={() => setOpen(false)}
-          // open={open}
+          open={open}
           editFormData={props.editFormData}
           isAddButton={isAddButton}
           addFormData={props.addFormData}
           formData={isAddButton ? emptyDefault : getDataFromId()}
         />
       )}
-      {/* ------------------------------------------------------ */}
     </div>
   );
 }
 
 //gets stuff from the store and returns in the component as props
-function mapStateToProps(store) {
+function mapStateToProps(state) {
   //returning as props object
   return {
-    formDataRows: store.formDataReducer.rows
+    formDataRows: state.formDataReducer.rows
   };
 }
 

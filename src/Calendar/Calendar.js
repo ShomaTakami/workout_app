@@ -20,7 +20,7 @@ function Calendar({ match, history, location }) {
       <br />
       <DateMonth />
       {/* //TODO クリックしたら今日のトレーニングの詳細が出る */}
-      <CalendarDetail className='detail' />
+      <CalendarDetail />
     </div>
   );
 }

@@ -26,4 +26,5 @@ body {
 .rec_page {
   background-color: #ddd;
   height: 90vh;
+  margin: 0;
 }

@@ -38,7 +38,7 @@ export default function formData(state = initialState, action) {
       };
     case "EDIT_FORM_DATA":
       let editedRows = state.rows;
-      console.log("edited object", action.payload);
+      // console.log("edited object", action.payload);
 
       const newRows = editedRows.map(row => {
         if (row.id === action.payload.id) {

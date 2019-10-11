@@ -3,7 +3,13 @@
   width: 75vw;
   height: 550px;
 }
+.detail {
+  margin: 100px 120px;
+}
 
+.calendar {
+  margin: 45px auto;
+}
 .cal_h1 {
   color: #3f52b5;
 }

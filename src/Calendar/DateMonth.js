@@ -53,12 +53,14 @@ export default class DateMonth extends React.Component {
   }
 
   render() {
+    console.log(this.getTileClass);
     return (
       <Calendar
         locale='en'
         value={this.state.date}
         tileClassName={this.getTileClass}
         tileContent={this.getTileContent}
+        className='calendar'
       />
     );
   }

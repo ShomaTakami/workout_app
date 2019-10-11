@@ -21,7 +21,7 @@ const rows = [
 class CalendarDetail extends React.Component {
   render() {
     return (
-      <Paper>
+      <Paper className='detail'>
         <Table>
           <TableHead>
             <TableRow>
