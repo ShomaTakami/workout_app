@@ -4,7 +4,6 @@ import TextField from "@material-ui/core/TextField";
 import Dialog from "@material-ui/core/Dialog";
 import DialogActions from "@material-ui/core/DialogActions";
 import DialogContent from "@material-ui/core/DialogContent";
-// import DialogContentText from "@material-ui/core/DialogContentText";
 import DialogTitle from "@material-ui/core/DialogTitle";
 import uuid from "uuid/v1";
 import { makeStyles } from "@material-ui/core/styles";
@@ -20,12 +19,6 @@ const useStyles = makeStyles(theme => ({
     textAlign: "center",
     color: "#3F52B5"
   }
-  // table: {
-  //   minWidth: 650
-  // },
-  // listText: {
-  //   fontSize: "23px"
-  // }
 }));
 
 export default function FormDialog(props) {
@@ -42,8 +35,6 @@ export default function FormDialog(props) {
   const [goalValue, setGoalValue] = React.useState(goal);
 
   const save = () => {
-    // 1. validation
-
     console.log({
       menu: menuValue,
       part: partValue,

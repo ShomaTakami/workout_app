@@ -1,7 +1,6 @@
 import React from "react";
 import WorkoutTable from "./WorkoutTable";
 import Modal from "./Modal";
-// import { rows } from "./FormDataContent";
 import { Link } from "react-router-dom";
 
 // Redux Step 1 > import 2 things
@@ -22,28 +21,21 @@ function Workout(props) {
   const [isAddButton, setIsAddButton] = React.useState(true);
   const [formDataId, setFormDataId] = React.useState(null);
 
-  //fires function right away when component loads
   React.useEffect(() => {
     if (props.formDataRows.length === 0) {
       props.getFormData();
     }
   });
 
-  //Does not fire right away. Needs to be called from UI
-  // const getFormData = () => props.getFormData();
-
-  //object
   const emptyDefault = {
-    menu: "", //means null
+    menu: "",
     part: "",
     weight: "",
     reps: "",
     sets: ""
   };
 
-  //function
   const getDataFromId = () => {
-    // find the index of the object containing the right id
     const index = props.formDataRows.findIndex(row => formDataId === row.id);
 
     return props.formDataRows[index];
@@ -82,15 +74,12 @@ function Workout(props) {
   );
 }
 
-//gets stuff from the store and returns in the component as props
 function mapStateToProps(state) {
-  //returning as props object
   return {
     formDataRows: state.formDataReducer.rows
   };
 }
 
-//gets action from redux and returns in the component as props
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
@@ -104,8 +93,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-  //1. getting states
   mapStateToProps,
-  //2. getting actions
   mapDispatchToProps
 )(Workout);

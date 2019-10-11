@@ -29,11 +29,11 @@
 }
 
 #chart {
-  margin: 55px auto;
+  margin: 10px auto 150px auto;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 1500px;
-  height: 900px;
+  height: 850px;
   background-color: #fff;
 }

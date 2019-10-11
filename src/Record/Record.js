@@ -41,13 +41,11 @@ const Record = (props, { match, history, location }) => {
 };
 
 function mapStateToProps(state) {
-  //returning as props object
   return {
     formDataRows: state.formDataReducer.rows
   };
 }
 
-//gets action from redux and returns in the component as props
 function mapDispatchToProps(dispatch) {
   return bindActionCreators(
     {
@@ -61,8 +59,6 @@ function mapDispatchToProps(dispatch) {
 }
 
 export default connect(
-  //1. getting states
   mapStateToProps,
-  //2. getting actions
   mapDispatchToProps
 )(Record);

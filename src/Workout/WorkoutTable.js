@@ -40,11 +40,10 @@ const columns = [
 const useStyles = makeStyles({
   root: {
     width: "90%",
-    margin: "65px auto"
+    margin: "120px auto"
   },
   tableWrapper: {
     maxHeight: 500
-    // overflow: "auto"
   },
   text: {
     fontSize: "20px"
@@ -77,7 +76,7 @@ function WorkoutTable({
   return (
     <Paper className={classes.root}>
       <div className={classes.tableWrapper}>
-        <Table stickyHeader>
+        <Table stickyHeader className={classes.table}>
           <TableHead>
             <TableRow>
               {columns.map(column => (
@@ -120,7 +119,6 @@ function WorkoutTable({
                       );
                     })}
                     <TableCell align='right'>
-                      {/* This is edit button */}
                       <CreateIcon
                         color='secondary'
                         onClick={() => {

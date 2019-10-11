@@ -1,16 +1,7 @@
-// import { addFormData } from "../actions/formData";
-
-// constant file
-
-// function createData(id, menu, part, weight, reps, sets, goal) {
-//   return { id, menu, part, weight, reps, sets, goal };
-// }
-
 const initialState = {
   rows: []
 };
 
-// if threre is nothing in the state, use intialState
 export default function formData(state = initialState, action) {
   //action.type > condition
   switch (action.type) {
@@ -38,7 +29,6 @@ export default function formData(state = initialState, action) {
       };
     case "EDIT_FORM_DATA":
       let editedRows = state.rows;
-      // console.log("edited object", action.payload);
 
       const newRows = editedRows.map(row => {
         if (row.id === action.payload.id) {

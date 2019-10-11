@@ -19,9 +19,9 @@ function Calendar({ match, history, location }) {
       </div>
       <br />
       <DateMonth />
-      {/* //TODO クリックしたら今日のトレーニングの詳細が出る */}
       <CalendarDetail />
     </div>
   );
 }
+
 export default Calendar;

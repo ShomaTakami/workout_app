@@ -2,7 +2,6 @@ import React, { PureComponent } from "react";
 import {
   BarChart,
   Bar,
-  // Cell,
   XAxis,
   YAxis,
   CartesianGrid,
@@ -14,17 +13,16 @@ export default class Example extends PureComponent {
   static jsfiddleUrl = "https://jsfiddle.net/alidingling/90v76x08/";
 
   render() {
-    // console.log(this.state.rows);
     return (
       <BarChart
         width={1500}
-        height={900}
+        height={800}
         data={this.props.rows}
         margin={{
-          top: 25,
+          top: 15,
           right: 30,
           left: 20,
-          bottom: 50
+          bottom: 5
         }}>
         <CartesianGrid strokeDasharray='3 3' />
         <XAxis dataKey='menu' />

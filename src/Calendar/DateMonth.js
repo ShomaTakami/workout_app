@@ -6,26 +6,23 @@ export default class DateMonth extends React.Component {
     super(props);
     this.state = {
       date: new Date(),
-      //月のデータ
       month_days: {
-        20191014: { text: "bench Press" },
-        20191017: { text: "Squat" }
+        20191001: { text: "Done" },
+        20191003: { text: "Done" },
+        20191009: { text: "Done" }
       }
     };
     this.getTileClass = this.getTileClass.bind(this);
     this.getTileContent = this.getTileContent.bind(this);
   }
 
-  // state の日付と同じ表記に変換
   getFormatDate(date) {
     return `${date.getFullYear()}${("0" + (date.getMonth() + 1)).slice(-2)}${(
       "0" + date.getDate()
     ).slice(-2)}`;
   }
 
-  //日付のクラスを付与 (祝日用)
   getTileClass({ date, view }) {
-    // 月表示のときのみ
     if (view !== "month") {
       return "";
     }
@@ -35,9 +32,7 @@ export default class DateMonth extends React.Component {
       : "";
   }
 
-  //日付の内容を出力
   getTileContent({ date, view }) {
-    // 月表示のときのみ
     if (view !== "month") {
       return null;
     }
