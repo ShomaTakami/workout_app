@@ -33,8 +33,8 @@ const columns = [
   }
 ];
 
-function createData(id, menu, part, weight, reps, sets, goal) {
-  return { id, menu, part, weight, reps, sets, goal };
+function createData(id, menu, part, weight, reps, sets) {
+  return { id, menu, part, weight, reps, sets };
 }
 
 const rows = [
