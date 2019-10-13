@@ -65,7 +65,8 @@ const useStyles = makeStyles({
   },
   header_text: {
     fontSize: "20px",
-    fontStyle: "bold"
+    fontStyle: "bold",
+    color: "#b4b4b4"
   },
   pag_text: {
     color: "white",
