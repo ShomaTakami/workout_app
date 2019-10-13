@@ -61,7 +61,9 @@ const useStyles = makeStyles({
   root: {
     width: "80%",
     margin: "0 auto",
-    backgroundColor: "#b4b4b4"
+    backgroundColor: "#b4b4b4",
+    boxShadow: "none",
+    border: "1px solid white"
   },
   tableWrapper: {
     maxHeight: 440,
@@ -74,6 +76,10 @@ const useStyles = makeStyles({
   header_text: {
     fontSize: "20px",
     fontStyle: "bold"
+  },
+  pag_text: {
+    color: "white",
+    fontSize: "15px"
   }
 });
 
