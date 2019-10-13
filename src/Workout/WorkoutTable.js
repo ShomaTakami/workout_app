@@ -40,16 +40,31 @@ const columns = [
 const useStyles = makeStyles({
   root: {
     width: "90%",
-    margin: "120px auto"
+    margin: "120px auto",
+    backgroundColor: "#b4b4b4",
+    boxShadow: "none"
   },
   tableWrapper: {
     maxHeight: 500
   },
+  table: {
+    border: "1px solid white"
+  },
   text: {
-    fontSize: "20px"
+    fontSize: "20px",
+    color: "#b4b4b4"
   },
   list: {
-    fontSize: "15px"
+    fontSize: "15px",
+    color: "white",
+    marginTop: "10px",
+    marginBottom: "10px"
+  },
+  pagination: {
+    fontSize: "15px",
+    color: "white",
+    paddingTop: "25px",
+    paddingBottom: "25px"
   }
 });
 
@@ -136,23 +151,24 @@ function WorkoutTable({
                 );
               })}
           </TableBody>
+          <TablePagination
+            className={classes.pagination}
+            rowsPerPageOptions={[10, 5]}
+            component='div'
+            count={rows.length}
+            rowsPerPage={rowsPerPage}
+            page={page}
+            backIconButtonProps={{
+              "aria-label": "previous page"
+            }}
+            nextIconButtonProps={{
+              "aria-label": "next page"
+            }}
+            onChangePage={handleChangePage}
+            onChangeRowsPerPage={handleChangeRowsPerPage}
+          />
         </Table>
       </div>
-      <TablePagination
-        rowsPerPageOptions={[10, 25, 100]}
-        component='div'
-        count={rows.length}
-        rowsPerPage={rowsPerPage}
-        page={page}
-        backIconButtonProps={{
-          "aria-label": "previous page"
-        }}
-        nextIconButtonProps={{
-          "aria-label": "next page"
-        }}
-        onChangePage={handleChangePage}
-        onChangeRowsPerPage={handleChangeRowsPerPage}
-      />
     </Paper>
   );
 }

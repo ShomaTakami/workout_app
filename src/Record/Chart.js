@@ -6,7 +6,7 @@ import {
   YAxis,
   CartesianGrid,
   Tooltip,
-  Legend
+  ResponsiveContainer
 } from "recharts";
 
 export default class Example extends PureComponent {
@@ -14,24 +14,24 @@ export default class Example extends PureComponent {
 
   render() {
     return (
-      <BarChart
-        width={1500}
-        height={800}
-        data={this.props.rows}
-        margin={{
-          top: 15,
-          right: 30,
-          left: 20,
-          bottom: 5
-        }}>
-        <CartesianGrid strokeDasharray='3 3' />
-        <XAxis dataKey='menu' />
-        <YAxis type='number' name='goal' unit='lbs' />
-        <Tooltip />
-        <Legend />
-        <Bar dataKey='weight' label='Now' fill='#8884d8' />
-        <Bar dataKey='goal' stackId='a' fill='#82ca9d' />
-      </BarChart>
+      <ResponsiveContainer width={1500} height={700}>
+        <BarChart
+          data={this.props.rows}
+          margin={{
+            top: 15,
+            right: 30,
+            left: 20,
+            bottom: 5
+          }}>
+          <CartesianGrid strokeDasharray='3 3' />
+          <XAxis dataKey='menu' />
+          <YAxis type='number' name='goal' unit='lbs' />
+          <Tooltip />
+          {/* <Legend /> */}
+          <Bar dataKey='weight' label='Now' fill='#8884d8' />
+          <Bar dataKey='goal' stackId='a' fill='#82ca9d' />
+        </BarChart>
+      </ResponsiveContainer>
     );
   }
 }

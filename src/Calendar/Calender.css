@@ -1,14 +1,24 @@
+.cal_page {
+  margin: 0;
+  padding: 0;
+}
+
 .react-calendar {
   margin: 0 auto;
   width: 75vw;
-  height: 550px;
-}
-.detail {
-  margin: 100px 120px;
+  height: 525px;
+  background-color: #b4b4b4;
+  border: 1px solid white;
 }
 
+.react-calendar button {
+  color: white;
+}
+.react-calendar__month-view__days__day--weekend {
+  color: red !important;
+}
 .calendar {
-  margin: 45px auto;
+  margin: 50px auto;
 }
 .cal_h1 {
   color: #3f52b5;
@@ -27,4 +37,27 @@
 }
 .right {
   float: right;
+}
+
+.calendar_content {
+  margin: 20px auto 0 auto;
+}
+.today_content {
+  margin: 20px auto;
+}
+
+.MuiPaper-root {
+  background-color: #b4b4b4;
+}
+
+.MuiSvgIcon-root {
+  color: white;
+}
+
+.MuiTableCell-head {
+  color: white;
+}
+
+.MuiTableSortLabel-root.MuiTableSortLabel-active {
+  color: white;
 }

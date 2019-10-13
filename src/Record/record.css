@@ -1,39 +1,26 @@
-.char_h1 {
-  color: #3f52b5;
+.rec_page {
+  margin: 0;
+  padding: 0;
 }
 
-.header {
-  text-align: center;
+#chart {
+  margin: 20px auto;
 }
-
-/* .li {
-  display: inline;
-  margin: auto;
-  padding: 20px;
-} */
 .left {
   float: left;
 }
 .right {
   float: right;
 }
-.recharts-wrapper {
-  margin: 0;
-  padding: 0;
-  width: 100vw;
+.recharts-cartesian-axis-tick-line {
+  color: white;
 }
-.recharts-legend-item {
-  margin: 25px;
-  padding-top: 45px;
-  color: black;
+.recharts-cartesian-axis-tick-value {
+  color: white;
+  stroke: white;
+  fill: white;
 }
 
-#chart {
-  margin: 10px auto 150px auto;
-  -webkit-box-sizing: border-box;
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-  width: 1500px;
-  height: 850px;
-  background-color: #fff;
+.recharts-responsive-container {
+  margin: 120px auto 10px auto;
 }

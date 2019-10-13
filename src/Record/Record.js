@@ -6,6 +6,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import "./record.css";
+import "../header/AppBar.css";
 
 import {
   getFormData,
@@ -24,13 +25,13 @@ const Record = (props, { match, history, location }) => {
   console.log("data", props.formDataRows);
   return (
     <div className='rec_page'>
-      <div className='header'>
-        <Link to='/calendar' className='li left btn-square'>
-          Calendar
+      <div id='header'>
+        <Link to='/calendar' className='li left '>
+          &#8592; Calendar
         </Link>
         <h1 className='char_h1 li'>Chart</h1>
-        <Link to='/' className='li right btn-square'>
-          Menu
+        <Link to='/' className='li right'>
+          Menu &#8594;
         </Link>
       </div>
       <div id='chart'>

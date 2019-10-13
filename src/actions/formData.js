@@ -10,12 +10,21 @@ export function getFormData() {
 
   // NOT a default export
   const rows = [
+    createData(
+      "1",
+      "Example Menu",
+      "Example BodyPart",
+      "How much weight?",
+      "How many reps?",
+      "How many sets?",
+      "120"
+    ),
     createData("2", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
-    createData("33", "Shoulder Press", "Shoulder", "80", "10", "4", "80"),
-    createData("13", "Side Raise", "Shoulder", "40", "10", "3", "50"),
-    createData("4445", "Cable Press", "Chest", "10", "10", "3", "20"),
-    createData("689", "Dumbell Curl", "Biseps", "20", "10", "3", "50"),
-    createData("23", "Lat Pull", "Back", "70", "10", "3", "100")
+    createData("3", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
+    createData("4", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
+    createData("5", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
+    createData("6", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
+    createData("33", "Shoulder Press", "Shoulder", "80", "10", "4", "80")
   ];
 
   return function(dispatch) {

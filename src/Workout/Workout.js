@@ -1,5 +1,6 @@
 import React from "react";
 import WorkoutTable from "./WorkoutTable";
+import CenterMode from "./Slider";
 import Modal from "./Modal";
 import { Link } from "react-router-dom";
 
@@ -8,6 +9,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import "./workout.css";
+import "../header/AppBar.css";
 //Redux Step: import actions
 import {
   getFormData,
@@ -43,34 +45,42 @@ function Workout(props) {
 
   console.log("formDataRows", props.formDataRows);
   return (
-    <div className='work_page'>
-      <div className='header'>
-        <Link to='/record' className='li left btn-square'>
-          Chart
+    <>
+      <div id='header'>
+        <Link to='/record' className='li left '>
+          &#8592; Chart
         </Link>
         <h1 className='work_h1 li'>Menu</h1>
-        <Link to='/calendar' className='li right btn-square'>
-          Calendar
+        <Link to='/calendar' className='li right'>
+          Calendar &#8594;
         </Link>
       </div>
-      <WorkoutTable
-        openModal={() => setOpen(true)}
-        setIsAddButton={setIsAddButton}
-        setFormDataId={setFormDataId}
-        rows={props.formDataRows}
-        deleteFormData={props.deleteFormData}
-      />
-      {open && (
-        <Modal
-          handleClose={() => setOpen(false)}
-          open={open}
-          editFormData={props.editFormData}
-          isAddButton={isAddButton}
-          addFormData={props.addFormData}
-          formData={isAddButton ? emptyDefault : getDataFromId()}
+      <div className='work_page'>
+        <WorkoutTable
+          openModal={() => setOpen(true)}
+          setIsAddButton={setIsAddButton}
+          setFormDataId={setFormDataId}
+          rows={props.formDataRows}
+          deleteFormData={props.deleteFormData}
         />
-      )}
-    </div>
+        {open && (
+          <Modal
+            handleClose={() => setOpen(false)}
+            open={open}
+            editFormData={props.editFormData}
+            isAddButton={isAddButton}
+            addFormData={props.addFormData}
+            formData={isAddButton ? emptyDefault : getDataFromId()}
+          />
+        )}
+      </div>
+      <h1 style={{ textAlign: "center", marginBottom: "20px", padding: "0" }}>
+        Suggestion &#8595;
+      </h1>
+      <section>
+        <CenterMode />
+      </section>
+    </>
   );
 }
 
