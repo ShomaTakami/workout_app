@@ -9,22 +9,8 @@
 }
 
 /* Slider */
-
-/* .slider_content {
-  border: "1px solid white";
-  margin: "0 auto";
-  width: "80vw";
-  height: "25vh";
-}
 .slider_box {
-  background-color: "black";
-  text-align: "center";
-  height: "25vh";
-  margin-right: "5px";
-  margin-left: "5px";
-} */
-.slider_box {
-  margin: 0 5;
+  margin: 0 5px;
   position: relative;
   border-top: solid 2px rgba(255, 255, 255, 0.6);
   border-bottom: solid 2px rgba(255, 255, 255, 0.6);
@@ -61,6 +47,7 @@
   background: #ececec;
   border-radius: 0 15px 15px 0;
   transition: 0.4s;
+  margin: 0 auto 0 35px;
 }
 
 .btn-right-radius:hover {
@@ -80,6 +67,7 @@
   background: #ececec;
   border-radius: 15px 0 0 15px;
   transition: 0.4s;
+  margin: 0 35px 0 auto;
 }
 
 .btn-left-radius:hover {
