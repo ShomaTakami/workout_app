@@ -9,52 +9,42 @@ import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 
 const columns = [
-  { id: "name", label: "Name", minWidth: 170 },
-  { id: "code", label: "ISO\u00a0Code", minWidth: 100 },
+  { id: "menu", label: "Menu", minWidth: 170 },
+  { id: "part", label: "Part", minWidth: 100 },
   {
-    id: "population",
-    label: "Population",
+    id: "weight",
+    label: "Weight\u00a0(lbs)",
     minWidth: 170,
     align: "right",
     format: value => value.toLocaleString()
   },
   {
-    id: "size",
-    label: "Size\u00a0(km\u00b2)",
+    id: "reps",
+    label: "Reps",
     minWidth: 170,
     align: "right",
     format: value => value.toLocaleString()
   },
   {
-    id: "density",
-    label: "Density",
+    id: "sets",
+    label: "Sets",
     minWidth: 170,
-    align: "right",
-    format: value => value.toFixed(2)
+    align: "right"
   }
 ];
 
-function createData(name, code, population, size) {
-  const density = population / size;
-  return { name, code, population, size, density };
+function createData(id, menu, part, weight, reps, sets, goal) {
+  return { id, menu, part, weight, reps, sets, goal };
 }
 
 const rows = [
-  createData("India", "IN", 1324171354, 3287263),
-  createData("China", "CN", 1403500365, 9596961),
-  createData("Italy", "IT", 60483973, 301340),
-  createData("United States", "US", 327167434, 9833520),
-  createData("Canada", "CA", 37602103, 9984670),
-  createData("Australia", "AU", 25475400, 7692024),
-  createData("Germany", "DE", 83019200, 357578),
-  createData("Ireland", "IE", 4857000, 70273),
-  createData("Mexico", "MX", 126577691, 1972550),
-  createData("Japan", "JP", 126317000, 377973),
-  createData("France", "FR", 67022000, 640679),
-  createData("United Kingdom", "GB", 67545757, 242495),
-  createData("Russia", "RU", 146793744, 17098246),
-  createData("Nigeria", "NG", 200962417, 923768),
-  createData("Brazil", "BR", 210147125, 8515767)
+  createData("1", "this", "is example", 120, 10, 5),
+  createData("2", "this", "is example", 120, 10, 5),
+  createData("3", "this", "is example", 120, 10, 5),
+  createData("4", "this", "is example", 120, 10, 5),
+  createData("5", "this", "is example", 120, 10, 5),
+  createData("6", "this", "is example", 120, 10, 5),
+  createData("7", "this", "is example", 120, 10, 5)
 ];
 
 const useStyles = makeStyles({

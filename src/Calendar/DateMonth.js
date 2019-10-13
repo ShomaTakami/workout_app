@@ -1,5 +1,5 @@
 import React from "react";
-import Calendar from "react-calendar";
+import { Calendar as CalendarBox } from "react-calendar";
 
 export default class DateMonth extends React.Component {
   constructor(props) {
@@ -7,9 +7,9 @@ export default class DateMonth extends React.Component {
     this.state = {
       date: new Date(),
       month_days: {
-        20191001: { text: "Done" },
-        20191003: { text: "Done" },
-        20191009: { text: "Done" }
+        20191001: { menu: "Done" },
+        20191003: { menu: "Done" },
+        20191009: { menu: "Done" }
       }
     };
     this.getTileClass = this.getTileClass.bind(this);
@@ -40,8 +40,8 @@ export default class DateMonth extends React.Component {
     return (
       <p>
         <br />
-        {this.state.month_days[day] && this.state.month_days[day].text
-          ? this.state.month_days[day].text
+        {this.state.month_days[day] && this.state.month_days[day].menu
+          ? this.state.month_days[day].menu
           : " "}
       </p>
     );
@@ -50,7 +50,7 @@ export default class DateMonth extends React.Component {
   render() {
     console.log(this.getTileClass);
     return (
-      <Calendar
+      <CalendarBox
         locale='en'
         value={this.state.date}
         tileClassName={this.getTileClass}

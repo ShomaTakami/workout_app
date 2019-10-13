@@ -8,6 +8,7 @@ import TableHead from "@material-ui/core/TableHead";
 import TablePagination from "@material-ui/core/TablePagination";
 import TableRow from "@material-ui/core/TableRow";
 import AddIcon from "@material-ui/icons/Add";
+import TodayIcon from "@material-ui/icons/Today";
 import CreateIcon from "@material-ui/icons/Create";
 import DeleteIcon from "@material-ui/icons/Delete";
 
@@ -65,6 +66,9 @@ const useStyles = makeStyles({
     color: "white",
     paddingTop: "25px",
     paddingBottom: "25px"
+  },
+  icons: {
+    marginRight: "15px"
   }
 });
 
@@ -134,7 +138,9 @@ function WorkoutTable({
                       );
                     })}
                     <TableCell align='right'>
+                      <TodayIcon className={classes.icons} color='secondary' />
                       <CreateIcon
+                        className={classes.icons}
                         color='secondary'
                         onClick={() => {
                           setIsAddButton(false);
@@ -143,6 +149,7 @@ function WorkoutTable({
                         }}
                       />
                       <DeleteIcon
+                        className={classes.icons}
                         color='secondary'
                         onClick={() => deleteFormData(row.id)}
                       />
