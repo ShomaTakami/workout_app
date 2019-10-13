@@ -2,6 +2,9 @@
   padding: 0;
   margin: 0;
 }
+/* .makeStyles-tableWrapper-2 {
+  max-height: 90vh;
+} */
 
 .MuiPaper-elevation2 {
   width: 90vw;
@@ -9,6 +12,11 @@
 }
 
 /* Slider */
+.suggestion-con {
+  position: relative;
+  height: 30%;
+}
+
 .slider_box {
   margin: 0 5px;
   position: relative;
@@ -37,7 +45,7 @@
 }
 
 .btn-right-radius {
-  margin: 25px;
+  /* margin: 25px; */
   position: relative;
   display: inline-block;
   font-weight: bold;
@@ -47,7 +55,7 @@
   background: #ececec;
   border-radius: 0 15px 15px 0;
   transition: 0.4s;
-  margin: 0 auto 0 35px;
+  margin: 0 auto 25px 35px;
 }
 
 .btn-right-radius:hover {
@@ -57,7 +65,7 @@
   border-radius: 0 15px 15px 0;
 }
 .btn-left-radius {
-  margin: 25px;
+  /* margin: 25px; */
   position: relative;
   display: inline-block;
   font-weight: bold;
@@ -67,7 +75,7 @@
   background: #ececec;
   border-radius: 15px 0 0 15px;
   transition: 0.4s;
-  margin: 0 35px 0 auto;
+  margin: 0 35px 25px auto;
 }
 
 .btn-left-radius:hover {

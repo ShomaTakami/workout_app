@@ -74,12 +74,12 @@ function Workout(props) {
           />
         )}
       </div>
-      <h1 style={{ textAlign: "center", marginBottom: "20px", padding: "0" }}>
-        Suggestion &#8595;
-      </h1>
-      <section>
+      <div className='suggestion-con'>
+        <h1 style={{ textAlign: "center", marginBottom: "20px", padding: "0" }}>
+          Suggestion &#8595;
+        </h1>
         <CenterMode />
-      </section>
+      </div>
     </>
   );
 }

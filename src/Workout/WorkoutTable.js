@@ -41,12 +41,13 @@ const columns = [
 const useStyles = makeStyles({
   root: {
     width: "90%",
-    margin: "120px auto",
+    margin: "45px auto",
     backgroundColor: "#b4b4b4",
-    boxShadow: "none"
+    boxShadow: "none",
+    position: "relative"
   },
   tableWrapper: {
-    maxHeight: 500
+    // maxHeight: 500
   },
   table: {
     border: "1px solid white"
@@ -63,9 +64,9 @@ const useStyles = makeStyles({
   },
   pagination: {
     fontSize: "15px",
-    color: "white",
-    paddingTop: "25px",
-    paddingBottom: "25px"
+    color: "white"
+    // paddingTop: "25px",
+    // paddingBottom: "25px"
   },
   icons: {
     marginRight: "15px"

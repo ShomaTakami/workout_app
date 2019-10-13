@@ -27,7 +27,7 @@ export default class CenterMode extends Component {
               className='slider_box'
               style={{
                 textAlign: "center",
-                height: "25vh",
+
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
@@ -58,7 +58,7 @@ export default class CenterMode extends Component {
               className='slider_box'
               style={{
                 textAlign: "center",
-                height: "25vh",
+
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
@@ -89,7 +89,7 @@ export default class CenterMode extends Component {
               className='slider_box'
               style={{
                 textAlign: "center",
-                height: "25vh",
+
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
@@ -120,7 +120,7 @@ export default class CenterMode extends Component {
               className='slider_box'
               style={{
                 textAlign: "center",
-                height: "25vh",
+
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
@@ -151,7 +151,7 @@ export default class CenterMode extends Component {
               className='slider_box'
               style={{
                 textAlign: "center",
-                height: "25vh",
+
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
@@ -182,7 +182,7 @@ export default class CenterMode extends Component {
               className='slider_box'
               style={{
                 textAlign: "center",
-                height: "25vh",
+
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
@@ -213,7 +213,7 @@ export default class CenterMode extends Component {
               className='slider_box'
               style={{
                 textAlign: "center",
-                height: "25vh",
+
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
