@@ -38,14 +38,14 @@ export default class CenterMode extends Component {
                 exercises for building a muscular chest, no questions asked.
               </p>
               <a
-                class='btn-left-radius'
+                className='btn-left-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                class='btn-right-radius'
+                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
@@ -69,14 +69,14 @@ export default class CenterMode extends Component {
                 exercises for building a muscular chest, no questions asked.
               </p>
               <a
-                class='btn-left-radius'
+                className='btn-left-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                class='btn-right-radius'
+                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
@@ -100,14 +100,14 @@ export default class CenterMode extends Component {
                 exercises for building a muscular chest, no questions asked.
               </p>
               <a
-                class='btn-left-radius'
+                className='btn-left-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                class='btn-right-radius'
+                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
@@ -131,14 +131,14 @@ export default class CenterMode extends Component {
                 exercises for building a muscular chest, no questions asked.
               </p>
               <a
-                class='btn-left-radius'
+                className='btn-left-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                class='btn-right-radius'
+                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
@@ -162,14 +162,14 @@ export default class CenterMode extends Component {
                 exercises for building a muscular chest, no questions asked.
               </p>
               <a
-                class='btn-left-radius'
+                className='btn-left-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                class='btn-right-radius'
+                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
@@ -193,14 +193,14 @@ export default class CenterMode extends Component {
                 exercises for building a muscular chest, no questions asked.
               </p>
               <a
-                class='btn-left-radius'
+                className='btn-left-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                class='btn-right-radius'
+                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
@@ -224,14 +224,14 @@ export default class CenterMode extends Component {
                 exercises for building a muscular chest, no questions asked.
               </p>
               <a
-                class='btn-left-radius'
+                className='btn-left-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                class='btn-right-radius'
+                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
                 target='_blank'
                 rel='noopener noreferrer'>
