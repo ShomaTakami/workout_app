@@ -33,20 +33,6 @@ const columns = [
   }
 ];
 
-function createData(id, menu, part, weight, reps, sets) {
-  return { id, menu, part, weight, reps, sets };
-}
-
-const rows = [
-  createData("1", "this", "is example", 120, 10, 5),
-  createData("2", "this", "is example", 120, 10, 5),
-  createData("3", "this", "is example", 120, 10, 5),
-  createData("4", "this", "is example", 120, 10, 5),
-  createData("5", "this", "is example", 120, 10, 5),
-  createData("6", "this", "is example", 120, 10, 5),
-  createData("7", "this", "is example", 120, 10, 5)
-];
-
 const useStyles = makeStyles({
   root: {
     width: "80%",
@@ -74,7 +60,7 @@ const useStyles = makeStyles({
   }
 });
 
-export default function StickyHeadTable() {
+export default function StickyHeadTable({ rows }) {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
   const [rowsPerPage, setRowsPerPage] = React.useState(10);
@@ -132,7 +118,7 @@ export default function StickyHeadTable() {
       </div>
       <TablePagination
         className={classes.text}
-        rowsPerPageOptions={[10, 25, 100]}
+        rowsPerPageOptions={[5, 10, 15]}
         component='div'
         count={rows.length}
         rowsPerPage={rowsPerPage}

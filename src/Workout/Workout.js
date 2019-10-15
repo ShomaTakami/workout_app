@@ -14,6 +14,7 @@ import "../header/AppBar.css";
 import {
   getFormData,
   addFormData,
+  addToCalendar,
   deleteFormData,
   editFormData
 } from "../actions/formData";
@@ -59,6 +60,7 @@ function Workout(props) {
         <WorkoutTable
           openModal={() => setOpen(true)}
           setIsAddButton={setIsAddButton}
+          addToCalendar={props.addToCalendar}
           setFormDataId={setFormDataId}
           rows={props.formDataRows}
           deleteFormData={props.deleteFormData}
@@ -95,6 +97,7 @@ function mapDispatchToProps(dispatch) {
     {
       getFormData,
       addFormData,
+      addToCalendar,
       deleteFormData,
       editFormData
     },

@@ -21,6 +21,13 @@ export default function formData(state = initialState, action) {
         ...state,
         rows: copiedRows
       };
+    // TODO this is for send data to calendar
+    case "ADD_TO_CALENDAR_DATA":
+      let calendarRows = state.rows;
+      return {
+        ...state,
+        rows: calendarRows.filter(row => row.id !== action.payload)
+      };
     case "DELETE_FORM_DATA":
       let reducedRows = state.rows;
       return {

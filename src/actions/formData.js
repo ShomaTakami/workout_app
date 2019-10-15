@@ -3,28 +3,13 @@ function createData(id, menu, part, weight, reps, sets, goal) {
 }
 
 export function getFormData() {
-  // console.log("action fired!");
-
-  //usually has API calls to get data from database
-  //but for now, send back fake data
-
-  // NOT a default export
   const rows = [
-    createData(
-      "1",
-      "Example Menu",
-      "Example BodyPart",
-      "How much weight?",
-      "How many reps?",
-      "How many sets?",
-      "120"
-    ),
+    createData("1", "Bench Press", "Chest", "170", "10", "3", "220"),
     createData("2", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
-    createData("3", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
-    createData("4", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
-    createData("5", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
-    createData("6", "Incline Bench Press", "Chest", "90", "10", "3", "120"),
-    createData("33", "Shoulder Press", "Shoulder", "80", "10", "4", "80")
+    createData("3", "Dumbell Arm Curl", "Biseps", "30", "10", "3", "45"),
+    createData("4", "Cable Press", "Triseps", "40", "10", "3", "60"),
+    createData("5", "Side Raise", "Shoulder", "20", "15", "3", "30"),
+    createData("6", "Shoulder Press", "Shoulder", "80", "10", "4", "80")
   ];
 
   return function(dispatch) {
@@ -35,9 +20,17 @@ export function getFormData() {
   };
 }
 
-// payload ====> data to send to the reducer
+//TODO Calendar
+export function addToCalendar(payload) {
+  console.log("payload", payload);
+  return function(dispatch) {
+    dispatch({
+      type: "ADD_TO_CALENDAR_DATA",
+      payload: payload
+    });
+  };
+}
 export function addFormData(payload) {
-  // console.log("payload", payload);
   return function(dispatch) {
     dispatch({
       type: "ADD_FORM_DATA",

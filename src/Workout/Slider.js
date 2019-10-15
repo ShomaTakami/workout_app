@@ -62,7 +62,7 @@ export default class CenterMode extends Component {
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
-              <h1 style={{ margin: "0", padding: "25px" }}>Chest</h1>
+              <h1 style={{ margin: "0", padding: "25px" }}>Shoulder</h1>
               <p>
                 you probably don't want to spend a Monday afternoon—or several
                 Mondays—trying them all. You just want to know the best
@@ -93,7 +93,7 @@ export default class CenterMode extends Component {
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
-              <h1 style={{ margin: "0", padding: "25px" }}>Chest</h1>
+              <h1 style={{ margin: "0", padding: "25px" }}>Arms</h1>
               <p>
                 you probably don't want to spend a Monday afternoon—or several
                 Mondays—trying them all. You just want to know the best
@@ -124,7 +124,7 @@ export default class CenterMode extends Component {
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
-              <h1 style={{ margin: "0", padding: "25px" }}>Chest</h1>
+              <h1 style={{ margin: "0", padding: "25px" }}>Back</h1>
               <p>
                 you probably don't want to spend a Monday afternoon—or several
                 Mondays—trying them all. You just want to know the best
@@ -155,7 +155,7 @@ export default class CenterMode extends Component {
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
-              <h1 style={{ margin: "0", padding: "25px" }}>Chest</h1>
+              <h1 style={{ margin: "0", padding: "25px" }}>Abs</h1>
               <p>
                 you probably don't want to spend a Monday afternoon—or several
                 Mondays—trying them all. You just want to know the best
@@ -186,38 +186,7 @@ export default class CenterMode extends Component {
                 marginRight: "5px",
                 marginLeft: "5px"
               }}>
-              <h1 style={{ margin: "0", padding: "25px" }}>Chest</h1>
-              <p>
-                you probably don't want to spend a Monday afternoon—or several
-                Mondays—trying them all. You just want to know the best
-                exercises for building a muscular chest, no questions asked.
-              </p>
-              <a
-                className='btn-left-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
-                target='_blank'
-                rel='noopener noreferrer'>
-                HOME TRAINING
-              </a>
-              <a
-                className='btn-right-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
-                target='_blank'
-                rel='noopener noreferrer'>
-                GYM TRAINING
-              </a>
-            </div>
-          </div>
-          <div>
-            <div
-              className='slider_box'
-              style={{
-                textAlign: "center",
-
-                marginRight: "5px",
-                marginLeft: "5px"
-              }}>
-              <h1 style={{ margin: "0", padding: "25px" }}>Chest</h1>
+              <h1 style={{ margin: "0", padding: "25px" }}>Legs</h1>
               <p>
                 you probably don't want to spend a Monday afternoon—or several
                 Mondays—trying them all. You just want to know the best

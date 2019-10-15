@@ -77,6 +77,7 @@ function WorkoutTable({
   openModal,
   setIsAddButton,
   setFormDataId,
+  addToCalendar,
   rows,
   deleteFormData
 }) {
@@ -139,7 +140,15 @@ function WorkoutTable({
                       );
                     })}
                     <TableCell align='right'>
-                      <TodayIcon className={classes.icons} color='secondary' />
+                      <TodayIcon
+                        className={classes.icons}
+                        color='secondary'
+                        onClick={() => {
+                          // setIsAddButton(false);
+                          // setFormDataId(row.id);
+                          addToCalendar(row.id);
+                        }}
+                      />
                       <CreateIcon
                         className={classes.icons}
                         color='secondary'

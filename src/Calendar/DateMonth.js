@@ -7,9 +7,7 @@ export default class DateMonth extends React.Component {
     this.state = {
       date: new Date(),
       month_days: {
-        20191001: { menu: "Done" },
-        20191003: { menu: "Done" },
-        20191009: { menu: "Done" }
+        data: { menu: "Done" }
       }
     };
     this.getTileClass = this.getTileClass.bind(this);
