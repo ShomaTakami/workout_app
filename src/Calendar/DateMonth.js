@@ -75,7 +75,6 @@ export default class DateMonth extends React.Component {
   }
 
   render() {
-    console.log(this.getTileClass);
     return (
       <CalendarBox
         locale='en'

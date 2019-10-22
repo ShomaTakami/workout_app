@@ -22,7 +22,7 @@ const Record = (props, { match, history, location }) => {
     }
   });
 
-  console.log("data", props.formDataRows);
+  // console.log("data", props.formDataRows);
   return (
     <div className='rec_page'>
       <div id='header'>

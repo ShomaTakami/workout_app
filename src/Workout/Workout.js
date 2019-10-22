@@ -45,7 +45,7 @@ function Workout(props) {
     return props.formDataRows[index];
   };
 
-  console.log("formDataRows", props.formDataRows);
+  // console.log("formDataRows", props.formDataRows);
   return (
     <>
       <div id='header'>

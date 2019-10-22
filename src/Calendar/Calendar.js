@@ -17,6 +17,7 @@ function Calendar(props, { match, history, location }) {
       props.getFormData();
     }
   });
+
   return (
     <div className='cal_page'>
       <div id='header'>

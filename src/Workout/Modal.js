@@ -35,14 +35,14 @@ export default function FormDialog(props) {
   const [goalValue, setGoalValue] = React.useState(goal);
 
   const save = () => {
-    console.log({
-      menu: menuValue,
-      part: partValue,
-      weight: weightValue,
-      reps: repsValue,
-      sets: setsValue,
-      goal: goalValue
-    });
+    // console.log({
+    //   menu: menuValue,
+    //   part: partValue,
+    //   weight: weightValue,
+    //   reps: repsValue,
+    //   sets: setsValue,
+    //   goal: goalValue
+    // });
     // 2. save data to redux
     if (props.isAddButton) {
       props.addFormData({

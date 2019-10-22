@@ -22,7 +22,7 @@ export function getFormData() {
 
 //TODO Calendar
 export function addToCalendar(payload) {
-  console.log("payload", payload);
+  // console.log("payload", payload);
   return function(dispatch) {
     dispatch({
       type: "ADD_TO_CALENDAR_DATA",

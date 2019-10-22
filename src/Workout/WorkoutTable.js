@@ -142,6 +142,7 @@ function WorkoutTable({
                     })}
                     <TableCell align='right'>
                       <TodayIcon
+                        //TODO If this icon clicked, pass the data of list to calendar.
                         className={classes.icons}
                         color='secondary'
                         onClick={() => {
