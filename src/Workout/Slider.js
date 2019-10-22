@@ -39,14 +39,14 @@ export default class CenterMode extends Component {
               </p>
               <a
                 className='btn-left-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=BkS1-El_WlE'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
-                className='btn-right-radius'
                 href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                className='btn-right-radius'
                 target='_blank'
                 rel='noopener noreferrer'>
                 GYM TRAINING
@@ -70,14 +70,14 @@ export default class CenterMode extends Component {
               </p>
               <a
                 className='btn-left-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=GXk1GgvhyF8'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
                 className='btn-right-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=6EqI5V8AUp8'
                 target='_blank'
                 rel='noopener noreferrer'>
                 GYM TRAINING
@@ -101,14 +101,14 @@ export default class CenterMode extends Component {
               </p>
               <a
                 className='btn-left-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=z8_fSUc7MTw'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
                 className='btn-right-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=S5kOK3bxfro'
                 target='_blank'
                 rel='noopener noreferrer'>
                 GYM TRAINING
@@ -132,14 +132,14 @@ export default class CenterMode extends Component {
               </p>
               <a
                 className='btn-left-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=KFY3p3eMPkk'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
                 className='btn-right-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=lA7dbOmxs5I'
                 target='_blank'
                 rel='noopener noreferrer'>
                 GYM TRAINING
@@ -163,14 +163,14 @@ export default class CenterMode extends Component {
               </p>
               <a
                 className='btn-left-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=3p8EBPVZ2Iw'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
                 className='btn-right-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=iQIrxBmgXmE'
                 target='_blank'
                 rel='noopener noreferrer'>
                 GYM TRAINING
@@ -194,14 +194,14 @@ export default class CenterMode extends Component {
               </p>
               <a
                 className='btn-left-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=HIdxYCrqLQg'
                 target='_blank'
                 rel='noopener noreferrer'>
                 HOME TRAINING
               </a>
               <a
                 className='btn-right-radius'
-                href='https://www.youtube.com/watch?v=mQMA88jJrFc'
+                href='https://www.youtube.com/watch?v=RjexvOAsVtI'
                 target='_blank'
                 rel='noopener noreferrer'>
                 GYM TRAINING

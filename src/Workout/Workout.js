@@ -21,6 +21,7 @@ import {
 
 function Workout(props) {
   const [open, setOpen] = React.useState(false);
+  const [date, setDate] = React.useState(true);
   const [isAddButton, setIsAddButton] = React.useState(true);
   const [formDataId, setFormDataId] = React.useState(null);
 
@@ -60,7 +61,8 @@ function Workout(props) {
         <WorkoutTable
           openModal={() => setOpen(true)}
           setIsAddButton={setIsAddButton}
-          addToCalendar={props.addToCalendar}
+          date={date}
+          setDate={setDate}
           setFormDataId={setFormDataId}
           rows={props.formDataRows}
           deleteFormData={props.deleteFormData}

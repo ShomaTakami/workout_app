@@ -75,6 +75,7 @@ const useStyles = makeStyles({
 
 function WorkoutTable({
   openModal,
+  setDate,
   setIsAddButton,
   setFormDataId,
   addToCalendar,
@@ -83,7 +84,7 @@ function WorkoutTable({
 }) {
   const classes = useStyles();
   const [page, setPage] = React.useState(0);
-  const [rowsPerPage, setRowsPerPage] = React.useState(10);
+  const [rowsPerPage, setRowsPerPage] = React.useState(5);
 
   const handleChangePage = (event, newPage) => {
     setPage(newPage);
@@ -144,9 +145,8 @@ function WorkoutTable({
                         className={classes.icons}
                         color='secondary'
                         onClick={() => {
-                          // setIsAddButton(false);
-                          // setFormDataId(row.id);
-                          addToCalendar(row.id);
+                          setDate(true);
+                          setFormDataId(row.id);
                         }}
                       />
                       <CreateIcon
