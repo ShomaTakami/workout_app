@@ -1,5 +1,6 @@
 {
   "name": "second_app",
+  "homepage": "/workout",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
