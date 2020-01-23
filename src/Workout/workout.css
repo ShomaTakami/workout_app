@@ -1,10 +1,8 @@
 .work_page {
   padding: 0;
   margin: 0;
+  border: 1px solid red;
 }
-/* .makeStyles-tableWrapper-2 {
-  max-height: 90vh;
-} */
 
 .MuiPaper-elevation2 {
   width: 90vw;

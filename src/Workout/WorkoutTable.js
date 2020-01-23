@@ -47,10 +47,12 @@ const useStyles = makeStyles({
     position: "relative"
   },
   tableWrapper: {
-    // maxHeight: 500
+    width: "90vw"
   },
   table: {
-    border: "1px solid white"
+    border: "1px solid white",
+    width: "100%",
+    boxSizing: "border-box"
   },
   text: {
     fontSize: "20px",
@@ -106,13 +108,14 @@ function WorkoutTable({
                   key={column.id}
                   align={column.align}
                   style={{ minWidth: column.minWidth }}
-                  className={classes.text}>
+                  className={classes.text}
+                >
                   {column.label}
                 </TableCell>
               ))}
-              <TableCell align='right'>
+              <TableCell align="right">
                 <AddIcon
-                  color='primary'
+                  color="primary"
                   onClick={() => {
                     openModal();
                     setIsAddButton(true);
@@ -126,25 +129,26 @@ function WorkoutTable({
               .slice(page * rowsPerPage, page * rowsPerPage + rowsPerPage)
               .map(row => {
                 return (
-                  <TableRow hover role='checkbox' tabIndex={-1} key={row.id}>
+                  <TableRow hover role="checkbox" tabIndex={-1} key={row.id}>
                     {columns.map(column => {
                       const value = row[column.id];
                       return (
                         <TableCell
                           key={column.id}
                           align={column.align}
-                          className={classes.list}>
+                          className={classes.list}
+                        >
                           {column.format && typeof value === "number"
                             ? column.format(value)
                             : value}
                         </TableCell>
                       );
                     })}
-                    <TableCell align='right'>
+                    <TableCell align="right">
                       <TodayIcon
                         //TODO If this icon clicked, pass the data of list to calendar.
                         className={classes.icons}
-                        color='secondary'
+                        color="secondary"
                         onClick={() => {
                           setDate(true);
                           setFormDataId(row.id);
@@ -152,7 +156,7 @@ function WorkoutTable({
                       />
                       <CreateIcon
                         className={classes.icons}
-                        color='secondary'
+                        color="secondary"
                         onClick={() => {
                           setIsAddButton(false);
                           openModal();
@@ -161,7 +165,7 @@ function WorkoutTable({
                       />
                       <DeleteIcon
                         className={classes.icons}
-                        color='secondary'
+                        color="secondary"
                         onClick={() => deleteFormData(row.id)}
                       />
                     </TableCell>
@@ -172,7 +176,7 @@ function WorkoutTable({
           <TablePagination
             className={classes.pagination}
             rowsPerPageOptions={[10, 5]}
-            component='div'
+            component="div"
             count={rows.length}
             rowsPerPage={rowsPerPage}
             page={page}
